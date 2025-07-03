@@ -5,8 +5,6 @@ jobs:
   display-wd-info-ubuntu:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
       - name: Display Working Directory & List Files
         run: |
           pwd
@@ -18,8 +16,6 @@ jobs:
   display-wd-info-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
       - name: Display Working Directory & List Files
         run: |
           pwd
