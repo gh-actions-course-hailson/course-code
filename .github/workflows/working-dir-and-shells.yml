@@ -40,7 +40,6 @@ jobs:
       - name: Python Shell
         run: |
           python --version
-          python -c "print('Hello from Python!')"
         shell: python
       - name: Bash shell in Windows
         run: echo "This is a bash shell in Windows"
