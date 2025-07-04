@@ -2,7 +2,7 @@ name: Repository Events
 on: [push, pull_request, issues]
 
 jobs:
-  cchekout-test:
+  chekout-test:
     runs-on: ubuntu-latest
     steps:
       - name: Print Environment Variables
