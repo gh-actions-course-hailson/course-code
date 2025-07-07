@@ -3,7 +3,7 @@ on:
   push:
     branches: [main, "feature/*", "bugfix/*", "hotfix/*", "release/*", "!develop"]
     tags: ["v*"]
-    paths: ["**.js"]
+    #paths: ["**.js"]
   pull_request:
     types: [opened, reopened, synchronize, assigned]
     branches: [main]
