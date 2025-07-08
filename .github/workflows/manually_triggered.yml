@@ -3,17 +3,17 @@ name: Manually Triggered
 on:
   workflow_dispatch:
     inputs:
-      string:
-        description: 'A string input'
+      name:
+        description: 'Name of the person to greet'
         type: string
         required: true
-        default: 'default value'
-      name:
+      greeting:
         type: choice
-        description: Who to greet
         options: 
-        - monalisa
-        - cschleiden
+        - Hello
+        - Bye
+        default: Hello
+        description: 'String to use in the greeting'
       message:
         required: true
       use-emoji:
@@ -32,4 +32,4 @@ jobs:
         run: |
           echo "String: ${{ inputs.string }}"
       - name: Send greeting
-        run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+        run: echo "${{ github.event.inputs.greeting }} ${{ github.event.inputs.name }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.message }}"
