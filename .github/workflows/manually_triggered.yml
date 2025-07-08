@@ -8,6 +8,19 @@ on:
         type: string
         required: true
         default: 'default value'
+      name:
+        type: choice
+        description: Who to greet
+        options: 
+        - monalisa
+        - cschleiden
+      message:
+        required: true
+      use-emoji:
+        type: boolean
+        description: Include 🎉🤣 emojis
+      environment:
+        type: environment
 
 jobs:
   log-info:
