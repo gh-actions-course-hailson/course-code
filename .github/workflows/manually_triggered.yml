@@ -15,3 +15,6 @@ jobs:
     steps:
       - name: Print REF
         run: echo "$GITHUB_REF"
+      - name: Print Input
+        run: |
+          echo "String: ${{ inputs.string }}"
