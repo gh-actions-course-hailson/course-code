@@ -19,8 +19,8 @@ jobs:
       - name: Contexts
         id: contexts
         run: |
-          echo '${{ toJson(github) }}'
-          echo '${{ toJson(job) }}'
-          echo '${{ toJson(secrets) }}'
-          echo '${{ toJson(steps) }}'
-          echo '${{ toJson(runner) }}'
+          echo -e 'GitHub Context: ${{ toJson(github) }}\n\n'
+          echo -e 'Job Context: ${{ toJson(job) }}\n\n'
+          echo -e 'Secrets Context: ${{ toJson(secrets) }}\n\n'
+          echo -e 'Steps Context: ${{ toJson(steps) }}\n\n'
+          echo -e 'Runner Context: ${{ toJson(runner) }}\n\n'
