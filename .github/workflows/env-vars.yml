@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       JOB_LEVEL_ENV: "Job Level Env Var"
-    if: github.ref == 'refs/head/main'
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Log ENV VAR
         run: echo $GITHUB_REF
