@@ -23,7 +23,8 @@ jobs:
         run: |
           echo "RANDOM_JOKE<<EOF" >> $GITHUB_ENV
           echo "Why did the scarecrow win an award?" >> $GITHUB_ENV
-          echo -e "\nBecause he was outstanding in his field!" >> $GITHUB_ENV
+          echo "" >> $GITHUB_ENV
+          echo "Because he was outstanding in his field!" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: Log Custom ENV Vars
         env:
@@ -36,11 +37,3 @@ jobs:
           echo $JOB_LEVEL_ENV
           echo $NEW_ENV_VAR
           echo $RANDOM_JOKE
-
-  test-new-env-var:
-    runs-on: ubuntu-latest
-    needs: env-var-and-context
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Log New Env Var
-        run: echo $NEW_ENV_VAR
