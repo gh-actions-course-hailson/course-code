@@ -23,7 +23,6 @@ jobs:
         run: |
           echo "RANDOM_JOKE<<EOF" >> $GITHUB_ENV
           echo "Why did the scarecrow win an award?" >> $GITHUB_ENV
-          echo "" >> $GITHUB_ENV
           echo "Because he was outstanding in his field!" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
       - name: Log Custom ENV Vars
